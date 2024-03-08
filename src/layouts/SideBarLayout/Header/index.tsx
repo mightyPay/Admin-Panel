@@ -35,7 +35,7 @@ const SideBarLayoutHeader = () => {
             <img src="" />
           </div>
           {/* title */}
-          <span className="text-sm font-semibold mr-1">hkrhasan</span>
+          <span className="text-sm font-semibold mr-1">MPAY ADMIN</span>
           {/* Icon */}
           <MdKeyboardArrowDown className="text-md" />
         </div>
