@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import QRCode from "react-qr-code";
+import QRCode from "qrcode.react";
 import { IQrControl } from "../type";
 import { RightSlide } from "../../components";
 import { FaQrcode } from "react-icons/fa";

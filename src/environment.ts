@@ -1,11 +1,11 @@
 export const RELEASE_VERSION = "1.0.0";
 
 export const _Environments: { [key: string]: any } = {
-  // production: {
-  //   env: "production",
-  //   baseUrl: "https://dev.perfumecart.ae/api/",
-  //   release: RELEASE_VERSION,
-  // },
+  production: {
+    env: "production",
+    baseUrl: "https://dev.perfumecart.ae/api/",
+    release: RELEASE_VERSION,
+  },
   development: {
     env: "development",
    // baseUrl: "http://localhost:4000/api/",
