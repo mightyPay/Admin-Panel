@@ -6,4 +6,10 @@ export default class Dashboard {
       url: `v1/dashboard/metrics?duration=${duration}`,
     });
   }
+  static getActiveUserCount(){
+    return request({
+      url:"v1/users/get-active-users",
+    })
+  }
 }
+

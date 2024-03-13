@@ -7,6 +7,8 @@ import DashboardService from "../../api/dashboard";
 import { useQuery } from "react-query";
 import { CgSpinner } from "react-icons/cg";
 import clsxm from "../../utils/clsxm";
+import { log } from "console";
+
 
 const Home = () => {
   const [duration, setDuration] = useState<string>("ALL");
@@ -16,6 +18,7 @@ const Home = () => {
         account: any;
         transaction: any;
         walletTopUp: any;
+        activeUsers:any;
       }
     | undefined
   >(undefined);
@@ -34,6 +37,20 @@ const Home = () => {
       },
     }
   );
+  const { isLoading: activeUsersLoading } = useQuery(
+    "get-active-users",
+    DashboardService.getActiveUserCount,
+    {
+      onSuccess: (res: any) => {
+        const { data } = res;
+        setMetrics(data.data);
+      },
+      onError: (error: any) => {
+        console.log({ error });
+      },
+    }
+  );
+ 
 
   return (
     <PageContainer
@@ -70,7 +87,7 @@ const Home = () => {
           {...{
             subTitle: "count",
             title: "Users",
-            bgColor: "bg-blue-100",
+            bgColor: "bg-blue-200",
             metric: metrics?.user?._count || "0",
             isLoading,
           }}
@@ -79,7 +96,7 @@ const Home = () => {
           {...{
             subTitle: "count",
             title: "Wallet",
-            bgColor: "bg-orange-100",
+            bgColor: "bg-orange-200",
             metric: metrics?.account?._count || "0",
             isLoading,
           }}
@@ -97,7 +114,7 @@ const Home = () => {
           {...{
             subTitle: "sum",
             title: "Transactions",
-            bgColor: "bg-gray-100",
+            bgColor: "bg-gray-200",
             metric: metrics?.transaction?._sum?.amount || "0",
             isLoading,
           }}
@@ -106,7 +123,7 @@ const Home = () => {
           {...{
             subTitle: "count",
             title: "TopUp",
-            bgColor: "bg-yellow-100",
+            bgColor: "bg-yellow-200",
             metric: metrics?.walletTopUp?._count || "0",
             isLoading,
           }}
@@ -115,11 +132,21 @@ const Home = () => {
           {...{
             subTitle: "sum",
             title: "TopUp",
-            bgColor: "bg-red-100",
+            bgColor: "bg-red-200",
             metric: metrics?.walletTopUp?._sum?.amount || "0",
             isLoading,
           }}
         />
+        <MetricsCard
+          {...{
+            subTitle: "count",
+            title: "Active Users",
+            bgColor: "bg-blue-200",
+            metric: metrics?.activeUsers  || "0",
+            isLoading: activeUsersLoading,
+          }}
+        />
+        
       </div>
     </PageContainer>
   );
