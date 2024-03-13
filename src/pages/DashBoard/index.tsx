@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BsArrowRight } from "react-icons/bs";
+//import { BsArrowRight } from "react-icons/bs";
 import { TabBar } from "../../components";
 import { BoxContainer, PageContainer } from "../../containers";
 import { PageHeader } from "../../pageComponents";
@@ -170,9 +170,9 @@ function MetricsCard({ title, isLoading, metric, subTitle, bgColor }: any) {
             <h4>{subTitle}</h4>
             <p className="text-xl font-bold">{title}</p>
           </div>
-          <div>
+          {/* <div>
             <BsArrowRight className="text-4xl" />
-          </div>
+          </div> */}
         </div>
       </div>
     </BoxContainer>
