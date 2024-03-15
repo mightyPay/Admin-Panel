@@ -18,7 +18,6 @@ const Home = () => {
         account: any;
         transaction: any;
         walletTopUp: any;
-        activeUsers:any;
       }
     | undefined
   >(undefined);
@@ -37,19 +36,19 @@ const Home = () => {
       },
     }
   );
-  const { isLoading: activeUsersLoading } = useQuery(
-    "get-active-users",
-    DashboardService.getActiveUserCount,
-    {
-      onSuccess: (res: any) => {
-        const { data } = res;
-        setMetrics(data.data);
-      },
-      onError: (error: any) => {
-        console.log({ error });
-      },
-    }
-  );
+  // const { isLoading: activeUsersLoading } = useQuery(
+  //   "get-active-users",
+  //   DashboardService.getActiveUserCount,
+  //   {
+  //     onSuccess: (res: any) => {
+  //       const { data } = res;
+  //       setMetrics(data.data);
+  //     },
+  //     onError: (error: any) => {
+  //       console.log({ error });
+  //     },
+  //   }
+  // );
  
 
   return (
@@ -142,8 +141,8 @@ const Home = () => {
             subTitle: "count",
             title: "Active Users",
             bgColor: "bg-blue-200",
-            metric: metrics?.activeUsers  || "0",
-            isLoading: activeUsersLoading,
+            metric: metrics?.user?._count  || "0",
+            isLoading,
           }}
         />
         
