@@ -8,10 +8,7 @@ export const _Environments: { [key: string]: any } = {
   },
   development: {
     env: "development",
-    // baseUrl: "http://localhost:4000/api/",
     baseUrl: "https://dev.perfumecart.ae/api/",
-    //baseUrl: "https://dev.perfumecart.ae/docs#/",
-    //baseUrl: "https://perfumecart.ae/api/",
     release: RELEASE_VERSION,
     logs: true,
   },
