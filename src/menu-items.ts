@@ -1,12 +1,13 @@
 import React from "react";
 import { BiCategory } from "react-icons/bi";
-import { FaHistory, FaRegChartBar, FaUserAlt, FaUsers } from "react-icons/fa";
+import { FaChartBar, FaHistory, FaRegChartBar, FaUserAlt, FaUsers } from "react-icons/fa";
 import { GiCarWheel } from "react-icons/gi";
 import { MdFastfood } from "react-icons/md";
 import { RiLogoutBoxRFill } from "react-icons/ri";
 import { HiUserAdd } from "react-icons/hi";
 import { BsFillImageFill } from "react-icons/bs";
 import { AiTwotoneNotification } from "react-icons/ai";
+import { MdOutlineCleaningServices } from "react-icons/md";
 
 export interface IActions {
   newEntry: {
