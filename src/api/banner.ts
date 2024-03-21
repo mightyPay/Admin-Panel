@@ -29,7 +29,7 @@ export default class Banner {
 
     return request({
       method: "post",
-      url: "v1/assets/banner/create",
+      url: "v1/assets/banner/create", 
       data: formData,
     });
   }

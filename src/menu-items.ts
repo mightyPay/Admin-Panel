@@ -7,6 +7,7 @@ import { RiLogoutBoxRFill } from "react-icons/ri";
 import { HiUserAdd } from "react-icons/hi";
 import { BsFillImageFill } from "react-icons/bs";
 import { AiTwotoneNotification } from "react-icons/ai";
+import { MdCleaningServices } from "react-icons/md";
 
 export interface IActions {
   newEntry: {
@@ -68,6 +69,14 @@ const menuItems: IMenuItems = {
       childrens: [],
     },
     {
+      id:"cleanly",
+      title:"Cleanly Services",
+      type: "item",
+      url:"#",
+      Icon:MdCleaningServices,
+      childrens:[]
+    },
+    {
       id: "transactions",
       title: "Transactions",
       type: "item",
@@ -75,6 +84,7 @@ const menuItems: IMenuItems = {
       Icon: FaHistory,
       childrens: [],
     },
+    
     {
       id: "assets-management",
       title: "Assets",
@@ -145,6 +155,14 @@ export const menuItemsBodyV1: IMenuItemV1[] = [
     url: "/dashboard/merchants",
     Icon: FaHistory,
     IconClass: "ri-building-4-line",
+  },
+  {
+    id:"cleanly",
+    title:"Cleanly Services",
+    type: "item",
+    url:"/cleanly",
+    Icon:MdCleaningServices,
+    IconClass: "ri-file-code-line"
   },
   {
     id: "users",
