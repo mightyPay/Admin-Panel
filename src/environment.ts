@@ -9,6 +9,7 @@ export const _Environments: { [key: string]: any } = {
   development: {
     env: "development",
     baseUrl: "https://dev.perfumecart.ae/api/",
+   // baseUrl: "https://localhost:4000/api/",
     release: RELEASE_VERSION,
     logs: true,
   },

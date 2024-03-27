@@ -72,7 +72,7 @@ const menuItems: IMenuItems = {
       id:"cleanly",
       title:"Cleanly Services",
       type: "item",
-      url:"#",
+      url:"/dashboard/cleanly",
       Icon:MdCleaningServices,
       childrens:[]
     },
@@ -160,7 +160,7 @@ export const menuItemsBodyV1: IMenuItemV1[] = [
     id:"cleanly",
     title:"Cleanly Services",
     type: "item",
-    url:"/cleanly",
+    url:"/dashboard/cleanly",
     Icon:MdCleaningServices,
     IconClass: "ri-file-code-line"
   },

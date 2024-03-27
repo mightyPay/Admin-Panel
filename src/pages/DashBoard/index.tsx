@@ -36,21 +36,6 @@ const Home = () => {
       },
     }
   );
-  // const { isLoading: activeUsersLoading } = useQuery(
-  //   "get-active-users",
-  //   DashboardService.getActiveUserCount,
-  //   {
-  //     onSuccess: (res: any) => {
-  //       const { data } = res;
-  //       setMetrics(data.data);
-  //     },
-  //     onError: (error: any) => {
-  //       console.log({ error });
-  //     },
-  //   }
-  // );
- 
-
   return (
     <PageContainer
       PageHeader={

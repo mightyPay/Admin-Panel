@@ -9,6 +9,7 @@ import { ProtectedRoute } from "./containers";
 import { SuspenseLoader } from "./components";
 import { TiThListOutline } from "react-icons/ti";
 import { MdOutlineCreateNewFolder } from "react-icons/md";
+import CleanlyDashboard from "./pages/Cleanly";
 
 const Loader = (Component: any) => (props: any) =>
   (
@@ -109,6 +110,10 @@ const routes: RouteObject[] = [
       {
         path: "merchants",
         element: <MerchantListPage />,
+      },
+      {
+        path:"cleanly",
+        element:<CleanlyDashboard/>
       },
       {
         path: "history",
